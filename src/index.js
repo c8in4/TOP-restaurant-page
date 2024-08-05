@@ -1,5 +1,6 @@
 import { homepage } from './home.js';
 import { menu } from './menu.js';
+import { contact } from './contact.js';
 import './style.css';
 
 const main = document.querySelector('main');
@@ -29,10 +30,13 @@ function switchContent(buttonId) {
     case 'menuButton':
       content = menu();
       break;
-
+    case 'contactButton':
+      content = contact();
+      break;
+      
     default:
       break;
   }
-  
+
   main.appendChild(content);
 };

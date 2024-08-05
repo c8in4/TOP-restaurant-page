@@ -1,6 +1,6 @@
 :root {
   --primary-bg-clr: #fffffff1;
-  --button-hover-clr: #fffffff7;
+  --button-hover-clr: #ffffff;
   --main-width: clamp(65ch, 70dvw, 100ch);
 }
 
@@ -20,11 +20,13 @@ body::before {
   right: 0;
   z-index: -1;
   background-image: url('shapauPizza.jpg');
+  background-repeat: repeat repeat;
   background-position: top center;
   opacity: 0.75;
 }
 body {
-  height: 100dvh;
+  position: relative;
+  min-height: 100dvh;
   width: 100dvw;
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -52,7 +54,7 @@ header nav button {
 
 header nav button:hover {
   /* background: var(--button-hover-clr); */
-  background-color: #0000009c;
+  background-color: black;
   color: white;
   cursor: pointer;
 }
@@ -68,14 +70,21 @@ main div {
 }
 
 main div img {
-  margin: 1rem auto;
+  margin: 2rem auto;
   width: 50%;
+  border-radius: 0.5rem;
+  outline: 0.5rem solid #ffffff;
+  box-shadow: 3px 3px 10px 10px rgb(100, 100, 100);
+}
+
+main div h1 {
+  padding-top: 1rem;
 }
 
 main div p {
   padding-bottom: 1rem;
   margin: 1rem auto;
-  text-align: left;
+  text-align: justify;
   width: clamp(40ch, 65ch, 80%);
 }
 
