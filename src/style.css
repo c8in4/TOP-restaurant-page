@@ -1,0 +1,87 @@
+:root {
+  --primary-bg-clr: #fffffff1;
+  --button-hover-clr: #fffffff7;
+  --main-width: clamp(65ch, 70dvw, 100ch);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-image: url('shapauPizza.jpg');
+  background-position: top center;
+  opacity: 0.75;
+}
+body {
+  height: 100dvh;
+  width: 100dvw;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  text-align: center;
+}
+
+header {
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  width: var(--main-width);
+  margin: 2rem auto;
+}
+
+header nav button {
+  flex: 1;
+  border: none;
+  padding: 1rem 2rem;
+  background: var(--primary-bg-clr);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header nav button:hover {
+  /* background: var(--button-hover-clr); */
+  background-color: #0000009c;
+  color: white;
+  cursor: pointer;
+}
+
+main {
+
+}
+
+main div {
+  background: var(--primary-bg-clr);
+  width: var(--main-width);
+  margin: auto;
+}
+
+main div img {
+  margin: 1rem auto;
+  width: 50%;
+}
+
+main div p {
+  padding-bottom: 1rem;
+  margin: 1rem auto;
+  text-align: left;
+  width: clamp(40ch, 65ch, 80%);
+}
+
+footer {
+  padding: 1rem;
+  margin: 0 auto;
+  background: var(--primary-bg-clr);
+  width: var(--main-width);
+}
