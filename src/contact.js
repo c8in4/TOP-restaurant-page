@@ -1,19 +1,24 @@
 const contact = () => {
   const container = document.createElement('div');
-  const heading = document.createElement('h1');
-  const form = document.createElement('form');
-
-  const nameLabel = document.createElement('label');
-  const nameInput = document.createElement('input');
-  nameLabel.appendChild(nameInput);
-  // nameLabel.setAttribute(id) = name;
-
-  form.append(nameLabel);
-
+  const heading = document.createElement('h2');
+  const contactDiv = document.createElement('div');
+  contactDiv.classList.add("contact");
+  const name = document.createElement('h3');
+  const phoneLabel = document.createElement('p');
+  const phoneNumber = document.createElement('p');
+  const emailLabel = document.createElement('p');
+  const emailAddress = document.createElement('p');
 
   heading.textContent = 'Contact';
+  name.textContent = 'Pizza Place';
+  phoneLabel.textContent = 'Phone:';
+  phoneNumber.textContent = '0123456789';
+  emailLabel.textContent = 'E-Mail:';
+  emailAddress.textContent = 'info@pizza.com';
 
-  container.append(heading, form);
+  contactDiv.append(phoneLabel, phoneNumber, emailLabel, emailAddress);
+  
+  container.append(heading, name, contactDiv);
 
   return container;
 }

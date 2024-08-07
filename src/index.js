@@ -33,7 +33,7 @@ function switchContent(buttonId) {
     case 'contactButton':
       content = contact();
       break;
-      
+
     default:
       break;
   }

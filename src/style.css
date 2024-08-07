@@ -1,5 +1,5 @@
 :root {
-  --primary-bg-clr: #fffffff1;
+  --primary-bg-clr: #ffffffce;
   --button-hover-clr: #ffffff;
   --main-width: clamp(65ch, 70dvw, 100ch);
 }
@@ -19,54 +19,66 @@ body::before {
   left: 0;
   right: 0;
   z-index: -1;
-  background-image: url('shapauPizza.jpg');
+  background-image: url('pizza.jpg');
+  background-size: cover;
   background-repeat: repeat repeat;
   background-position: top center;
-  opacity: 0.75;
+  opacity: 0.5;
 }
+
 body {
   position: relative;
   min-height: 100dvh;
   width: 100dvw;
+  overflow-x: hidden;
   display: grid;
   grid-template-rows: auto 1fr auto;
   text-align: center;
 }
 
 header {
+  background-color: var(--primary-bg-clr);
+  width: var(--main-width);
+
+  margin: 0 auto 2rem auto;
+}
+
+h1 {
+  margin-top: 2rem;
+}
+
+h2 {
+  margin: 1rem;
 }
 
 header nav {
   display: flex;
   justify-content: center;
   width: var(--main-width);
-  margin: 2rem auto;
+  margin: 2rem auto 0 auto;
 }
 
 header nav button {
   flex: 1;
   border: none;
   padding: 1rem 2rem;
-  background: var(--primary-bg-clr);
+  background: none;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 header nav button:hover {
-  /* background: var(--button-hover-clr); */
-  background-color: black;
-  color: white;
+  background: var(--button-hover-clr);
   cursor: pointer;
 }
 
-main {
-
-}
+main {}
 
 main div {
   background: var(--primary-bg-clr);
   width: var(--main-width);
-  margin: auto;
+  margin: 0 auto 2rem auto;
+  padding: 1rem 0;
 }
 
 main div img {
@@ -84,8 +96,46 @@ main div h1 {
 main div p {
   padding-bottom: 1rem;
   margin: 1rem auto;
-  text-align: justify;
+  text-align: center;
   width: clamp(40ch, 65ch, 80%);
+}
+
+div.contact {
+  margin: 0 auto;
+  background: none;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+div.menu {
+  width: clamp(40ch, 65ch, 80%);
+  margin: 1rem auto;
+  border: 5px;
+  border-style: ridge;
+  border-radius: 0.5rem;
+  outline: 0.3rem solid #ffffff;
+  box-shadow: 3px 3px 10px 10px rgb(100, 100, 100);
+}
+
+div.menu h3 {
+  text-transform: uppercase;
+}
+
+main .contact {
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 5px;
+  border-style: ridge;
+  border-radius: 0.5rem;
+  outline: 0.3rem solid #ffffff;
+  box-shadow: 3px 3px 5px 5px rgb(100, 100, 100);
+}
+
+main .contact p {
+  padding: 0;
+  margin: 0;
+  width: fit-content;
 }
 
 footer {
