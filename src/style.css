@@ -21,7 +21,8 @@ body::before {
   z-index: -1;
   background-image: url('pizza.jpg');
   background-size: cover;
-  background-repeat: repeat repeat;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-position: top center;
   opacity: 0.5;
 }
