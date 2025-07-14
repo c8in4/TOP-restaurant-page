@@ -1,0 +1,4 @@
+body {
+    height: 100dvh;
+    background: linear-gradient(oklch(0.7018 0.0763 243), oklch(71.382% 0.1361 65.246) 95%);
+}
