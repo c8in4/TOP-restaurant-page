@@ -1,10 +1,13 @@
 {
   "name": "top-restaurant-page",
+  "description": "keep score of your yahtzee game",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "webpack serve"
+    "build": "webpack",
+    "dev": "webpack serve",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
@@ -17,7 +20,6 @@
     "url": "https://github.com/c8in4/TOP-restaurant-page/issues"
   },
   "homepage": "https://github.com/c8in4/TOP-restaurant-page#readme",
-  "description": "",
   "devDependencies": {
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.3",
